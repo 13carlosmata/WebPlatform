@@ -13,7 +13,9 @@
               <h3> {{product.name}}
                   <em class="pull-right">{{product.price | currency}} </em>
                   <br>
-                  <button ng-show="product.button1" style="height:50px;width:100px"></button>
+                  <br>
+                  <button ng-show="product.button1" style="height:100px;width:100px"></button>
+                  <img ng-src="{{product.images[0].full}}" style="height:100px;width:100px" class="pull-right"/>
               </h3>
           </li>
       </ul>      
