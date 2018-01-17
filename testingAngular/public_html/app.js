@@ -4,6 +4,15 @@
     app.controller('StoreController',function(){ 
         this.products = gems;
     });
+    app.controller('TabController', function(){
+        this.tab = 1;
+        this.setTab = function(value){
+            this.tab = value;            
+        };
+        this.isSet = function(checkTab){
+            return this.tab === checkTab;
+        };
+    });
     var gems = [
         {
             name:'Uno',
@@ -15,7 +24,7 @@
                 {
                     full:'images/kth_logo_full.png',
                     thumb:'images/KTH_logo_thumb.png'
-                },
+                }
             ]
         },
         {
