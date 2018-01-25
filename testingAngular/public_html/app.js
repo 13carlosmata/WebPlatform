@@ -1,18 +1,15 @@
 /* global angular */
 (function(){
-    var app = angular.module('store', []);
-    app.controller('StoreController',function(){ 
-        this.products = gems;
-    });
-    app.controller('TabController', function(){
-        this.tab = 1;
-        this.setTab = function(value){
-            this.tab = value;            
-        };
-        this.isSet = function(checkTab){
-            return this.tab === checkTab;
-        };
-    });
+    var app = angular.module('store', ['store-directives']);
+        
+    app.controller('StoreController',['$http',function($http){
+        var store = this;
+        store.products = [];
+        $http.get('gems.json').success(function(data){
+            store.products = data;
+        });
+    }]);
+        
     app.controller('ReviewController',function(){
         this.review = {};
         this.addReview = function(product){
@@ -29,10 +26,8 @@
             button1: true,
             sold:true,
             images: [
-                {
-                    full:'images/kth_logo_full.png',
-                    thumb:'images/KTH_logo_thumb.png'
-                }
+                'images/KTH_logo_thumb.png',
+                "images/kth_logo_full.png"
             ],
             reviews: [{
                     stars: 5,
@@ -54,10 +49,8 @@
             button1:true,
             sold:false,
             images: [
-                {
-                    thumb:'images/kth_logo_full.png',
-                    full:'images/KTH_logo_thumb.png'
-                },
+                'images/kth_logo_full.png',
+                'images/KTH_logo_thumb.png'
             ],
             reviews:[{
                     stars: 3,
@@ -73,5 +66,5 @@
             ]
         }
     ]
-    
+        
 })();

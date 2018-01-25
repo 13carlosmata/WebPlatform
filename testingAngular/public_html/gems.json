@@ -1,0 +1,29 @@
+[
+    {
+        "name":"Uno",
+        "price": 2.95,
+        "description": "mae uno",
+        "button1": true,
+        "sold":true,
+        "images": [
+            "images/kth_logo_full.png",
+            "images/KTH_logo_thumb.png"      
+        ],
+        "reviews": []
+        
+    },
+    
+    {
+        "name":"Dos",
+        "price":5.95,
+        "description":"mae dos",
+        "button1":true,
+        "sold":false,
+        "images": [
+            "images/KTH_logo_thumb.png",
+            "images/kth_logo_full.png"
+            
+        ],
+        "reviews":[]
+    }
+]

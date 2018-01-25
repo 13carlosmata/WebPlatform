@@ -1,5 +1,9 @@
 {
-    "elements": {},
+    "elements": {
+        "product-description": {},
+        "product-tabs": {},
+        "h4": {}
+    },
     "attributes": {
         "integrity": {
             "context": "link"
