@@ -13,6 +13,13 @@
             return this.tab === checkTab;
         };
     });
+    app.controller('ReviewController',function(){
+        this.review = {};
+        this.addReview = function(product){
+            product.reviews.push(this.review);
+            this.review={};
+        };
+    });
     var gems = [
         {
             name:'Uno',
@@ -25,7 +32,19 @@
                     full:'images/kth_logo_full.png',
                     thumb:'images/KTH_logo_thumb.png'
                 }
-            ]
+            ],
+            reviews: [{
+                    stars: 5,
+                    body: "es varas",
+                    author: "Kali",
+                    createdOn: 180124
+                },{
+                    stars: 4,
+                    body: "ta bom",
+                    author: "wiwi",
+                    createdOn: 190124
+            }]
+            
         },
         {
             name:"Dos",
@@ -38,6 +57,18 @@
                     thumb:'images/kth_logo_full.png',
                     full:'images/KTH_logo_thumb.png'
                 },
+            ],
+            reviews:[{
+                    stars: 3,
+                    body: "boh",
+                    author: "toribio",
+                    createdOn: 200121
+                },{
+                    stars: 1,
+                    body: "no",
+                    author:"wawa",
+                    createdOn: 230019
+                }
             ]
         }
     ]
