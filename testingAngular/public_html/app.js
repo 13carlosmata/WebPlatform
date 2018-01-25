@@ -16,6 +16,7 @@
     app.controller('ReviewController',function(){
         this.review = {};
         this.addReview = function(product){
+            this.review.createdOn=Date.now();
             product.reviews.push(this.review);
             this.review={};
         };
@@ -37,12 +38,12 @@
                     stars: 5,
                     body: "es varas",
                     author: "Kali",
-                    createdOn: 180124
+                    createdOn: 1397490980837
                 },{
                     stars: 4,
                     body: "ta bom",
                     author: "wiwi",
-                    createdOn: 190124
+                    createdOn: 1397490980837
             }]
             
         },
@@ -62,12 +63,12 @@
                     stars: 3,
                     body: "boh",
                     author: "toribio",
-                    createdOn: 200121
+                    createdOn: 1397490980837
                 },{
                     stars: 1,
                     body: "no",
                     author:"wawa",
-                    createdOn: 230019
+                    createdOn: 1397490980837
                 }
             ]
         }
